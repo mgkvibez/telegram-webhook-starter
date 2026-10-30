@@ -54,4 +54,4 @@ grep -rn "getUpdates" --include=*.py . && fail "getUpdates found: this bot must 
 
 echo
 echo "GATE PASSED"
-python3 -m pytest -q 2>/dev/null | grep -E "[0-9]+ (passed|failed)" | tail -1
+python3 -m pytest 2>/dev/null | grep -E "[0-9]+ (passed|failed)" | tail -1
