@@ -53,4 +53,5 @@ step "gardening: no polling loop anywhere (this project is webhooks only)"
 grep -rn "getUpdates" --include=*.py . && fail "getUpdates found: this bot must not poll"
 
 echo
-echo "GATE PASSED: $(python3 -m pytest -q 2>/dev/null | grep -E '[0-9]+ (passed|failed)' | tail -1)"
+echo "GATE PASSED"
+python3 -m pytest -q 2>/dev/null | grep -E "[0-9]+ (passed|failed)" | tail -1
